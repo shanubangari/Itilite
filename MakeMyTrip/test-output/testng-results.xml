@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="485513" started-at="2022-02-15T22:07:26 IST" finished-at="2022-02-15T22:15:31 IST">
+  <suite name="Suite" duration-ms="413827" started-at="2022-02-15T23:43:07 IST" finished-at="2022-02-15T23:50:01 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="485513" started-at="2022-02-15T22:07:26 IST" finished-at="2022-02-15T22:15:31 IST">
+    <test name="Test" duration-ms="413827" started-at="2022-02-15T23:43:07 IST" finished-at="2022-02-15T23:50:01 IST">
       <class name="com.makemytrip.testscripts.Section_1_Test">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="launchBrowser" is-config="true" duration-ms="41150" started-at="2022-02-15T22:10:17 IST" finished-at="2022-02-15T22:10:58 IST">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="launchBrowser" is-config="true" duration-ms="57044" started-at="2022-02-15T23:45:38 IST" finished-at="2022-02-15T23:46:35 IST">
           <params>
             <param index="0">
               <value>
@@ -18,25 +18,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="signUpUsingGmail" is-config="true" duration-ms="10830" started-at="2022-02-15T22:10:58 IST" finished-at="2022-02-15T22:11:09 IST">
+        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="signUpUsingGmail" is-config="true" duration-ms="6203" started-at="2022-02-15T23:46:35 IST" finished-at="2022-02-15T23:46:42 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpUsingGmail -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="loginTest" duration-ms="65112" started-at="2022-02-15T22:11:09 IST" finished-at="2022-02-15T22:12:14 IST">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="loginTest" duration-ms="63948" started-at="2022-02-15T23:46:42 IST" finished-at="2022-02-15T23:47:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="userLogout" is-config="true" duration-ms="1" started-at="2022-02-15T22:12:14 IST" finished-at="2022-02-15T22:12:14 IST">
+        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="userLogout" is-config="true" duration-ms="0" started-at="2022-02-15T23:47:46 IST" finished-at="2022-02-15T23:47:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLogout -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="closeBrowser" is-config="true" duration-ms="1903" started-at="2022-02-15T22:12:14 IST" finished-at="2022-02-15T22:12:16 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@61ca2dfa]" name="closeBrowser" is-config="true" duration-ms="1350" started-at="2022-02-15T23:47:46 IST" finished-at="2022-02-15T23:47:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.makemytrip.testscripts.Section_1_Test -->
       <class name="com.makemytrip.testscripts.Section_2_Test">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="launchBrowser" is-config="true" duration-ms="70315" started-at="2022-02-15T22:07:27 IST" finished-at="2022-02-15T22:08:37 IST">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="launchBrowser" is-config="true" duration-ms="50235" started-at="2022-02-15T23:43:08 IST" finished-at="2022-02-15T23:43:58 IST">
           <params>
             <param index="0">
               <value>
@@ -47,25 +47,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="signUpUsingGmail" is-config="true" duration-ms="9937" started-at="2022-02-15T22:08:37 IST" finished-at="2022-02-15T22:08:47 IST">
+        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="signUpUsingGmail" is-config="true" duration-ms="9029" started-at="2022-02-15T23:43:58 IST" finished-at="2022-02-15T23:44:07 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpUsingGmail -->
-        <test-method status="PASS" signature="flightSearchTest()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="flightSearchTest" duration-ms="87797" started-at="2022-02-15T22:08:47 IST" finished-at="2022-02-15T22:10:15 IST">
+        <test-method status="PASS" signature="flightSearchTest()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="flightSearchTest" duration-ms="89316" started-at="2022-02-15T23:44:07 IST" finished-at="2022-02-15T23:45:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightSearchTest -->
-        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="userLogout" is-config="true" duration-ms="2" started-at="2022-02-15T22:10:15 IST" finished-at="2022-02-15T22:10:15 IST">
+        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="userLogout" is-config="true" duration-ms="2" started-at="2022-02-15T23:45:36 IST" finished-at="2022-02-15T23:45:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLogout -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="closeBrowser" is-config="true" duration-ms="1876" started-at="2022-02-15T22:10:15 IST" finished-at="2022-02-15T22:10:17 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1f021e6c]" name="closeBrowser" is-config="true" duration-ms="2087" started-at="2022-02-15T23:45:36 IST" finished-at="2022-02-15T23:45:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.makemytrip.testscripts.Section_2_Test -->
       <class name="com.makemytrip.testscripts.Section_3_Test">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="launchBrowser" is-config="true" duration-ms="68950" started-at="2022-02-15T22:12:16 IST" finished-at="2022-02-15T22:13:25 IST">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="launchBrowser" is-config="true" duration-ms="51105" started-at="2022-02-15T23:47:47 IST" finished-at="2022-02-15T23:48:38 IST">
           <params>
             <param index="0">
               <value>
@@ -76,19 +76,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="signUpUsingGmail" is-config="true" duration-ms="7439" started-at="2022-02-15T22:13:25 IST" finished-at="2022-02-15T22:13:32 IST">
+        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="signUpUsingGmail" is-config="true" duration-ms="6986" started-at="2022-02-15T23:48:38 IST" finished-at="2022-02-15T23:48:45 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpUsingGmail -->
-        <test-method status="PASS" signature="flightBookTest()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="flightBookTest" duration-ms="115986" started-at="2022-02-15T22:13:32 IST" finished-at="2022-02-15T22:15:28 IST">
+        <test-method status="PASS" signature="flightBookTest()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="flightBookTest" duration-ms="73082" started-at="2022-02-15T23:48:45 IST" finished-at="2022-02-15T23:49:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightBookTest -->
-        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="userLogout" is-config="true" duration-ms="2" started-at="2022-02-15T22:15:28 IST" finished-at="2022-02-15T22:15:28 IST">
+        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="userLogout" is-config="true" duration-ms="2" started-at="2022-02-15T23:49:58 IST" finished-at="2022-02-15T23:49:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLogout -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="closeBrowser" is-config="true" duration-ms="3394" started-at="2022-02-15T22:15:28 IST" finished-at="2022-02-15T22:15:31 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@4b53f538]" name="closeBrowser" is-config="true" duration-ms="2658" started-at="2022-02-15T23:49:58 IST" finished-at="2022-02-15T23:50:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

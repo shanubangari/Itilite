@@ -4,8 +4,6 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.makemytrip.testscripts.Section_1_Test"/>
-      <class name="com.makemytrip.testscripts.Section_2_Test"/>
-      <class name="com.makemytrip.testscripts.Section_3_Test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

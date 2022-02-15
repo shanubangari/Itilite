@@ -14,6 +14,11 @@ import org.openqa.selenium.support.PageFactory;
 import com.makemytrip.GeneriUtils.WebDriverUtility;
 
 public class UserHomePage {
+	/**
+	 * @author Jyoti H M
+	 * Implemented Encapsulation OOP's concept.
+	 * Collection of WebElements,locator & locators value, Business Logic's and access given to the user using getters methods.
+	 */
 	WebDriverUtility wlib=new WebDriverUtility();
 	String pwind;
 	public UserHomePage(WebDriver driver) {

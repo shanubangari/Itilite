@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.makemytrip.GeneriUtils.BaseClass;
 import com.makemytrip.GeneriUtils.WebDriverUtility;
@@ -14,8 +15,10 @@ import com.makemytrip.POMRepository.UserHomePage;
 public class Section_3_Test extends BaseClass {
 	/**
 	 * @author Jyoti H M
+	 * Book flight for round trip from Bangalore to Mumbai and print the FareCharge.
 	 */
 	WebDriverUtility wlib=new WebDriverUtility();
+	SoftAssert sa=new SoftAssert();
 	
 	@Test
 	public void flightBookTest() throws InterruptedException, IOException {
@@ -68,7 +71,7 @@ public class Section_3_Test extends BaseClass {
 		//Step8: Click on non secure trip.
 		//bookpg.clickOnDoNotSecureTrip(driver);
 	
-		
+		sa.assertAll();
 	}
 
 }

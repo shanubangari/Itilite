@@ -27,6 +27,13 @@ public class WebDriverUtility {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
+	/**
+	 * Generic method for take the screenshot.
+	 * @param driver
+	 * @param screenshotName
+	 * @return
+	 * @throws Throwable
+	 */
 	public static String takeScreenshot(WebDriver driver,String screenshotName) throws Throwable {
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
@@ -35,6 +42,12 @@ public class WebDriverUtility {
 		return dest.getAbsolutePath();
 	}
 	
+	/**
+	 * @author Jyoti 
+	 * Wait for the element visible using WebDriverWait.
+	 * @param driver
+	 * @param element
+	 */
 	public void awaitForElement(WebDriver driver,WebElement element) {
 		try {
 			System.out.println("retrying for element "+element);
@@ -60,17 +73,33 @@ public class WebDriverUtility {
 		action.moveToElement(element).perform();;
 	}
 	
+	/**
+	 * Method for handling Multiple options using Visible Text.
+	 * @param element
+	 * @param text
+	 */
 	public void selectOption(WebElement element, String text) {
 		Select option=new Select(element);
 		option.selectByVisibleText(text);
 	}
 	
+	/**
+	 * This method for Drag and drop mouse action. 
+	 * @param driver
+	 * @param source
+	 * @param target
+	 */
 	public void dragBtn(WebDriver driver, WebElement source, WebElement target) {
 		Actions action=new Actions(driver);
 		action.dragAndDrop(source, target).perform();
 		
 	}
 	
+	/**
+	 * Scroll to the particular element.
+	 * @param driver
+	 * @param element
+	 */
 	public void scrollToElement(WebDriver driver,WebElement element) {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", element);

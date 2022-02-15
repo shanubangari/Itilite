@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.makemytrip.testscripts.Section_3_Test">
+      <class name="com.makemytrip.testscripts.Section_1_Test">
         <methods>
           <include name="signUpUsingGmail"/>
-          <include name="flightBookTest"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
           <include name="userLogout"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.makemytrip.testscripts.Section_3_Test -->
+      </class> <!-- com.makemytrip.testscripts.Section_1_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -13,6 +13,11 @@ import org.openqa.selenium.support.ui.Select;
 import com.makemytrip.GeneriUtils.WebDriverUtility;
 
 public class Add_Travellers_Info_Page {
+	/**
+	 * @author Jyoti H M
+	 * Implemented Encapsulation OOP's concept.
+	 * Collection of WebElements, Business Logic's and access given to the user using getters methods.
+	 */
 	WebDriverUtility wlib=new WebDriverUtility();
 	public Add_Travellers_Info_Page(WebDriver driver) {
 		PageFactory.initElements(driver, this);

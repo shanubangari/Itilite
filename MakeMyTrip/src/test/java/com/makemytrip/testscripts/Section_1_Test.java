@@ -21,6 +21,7 @@ import com.makemytrip.POMRepository.UserHomePage;
 public class Section_1_Test extends BaseClass{
 	/**
 	 * @author Jyoti H M
+	 * Sign up using gmail and add travellers details.
 	 */
 	
 	ExcelUtility elib=new ExcelUtility();
@@ -57,7 +58,7 @@ public class Section_1_Test extends BaseClass{
 		infoPage.enterBirthday(driver);
 		
 		//Click on Save Button.
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		infoPage.clickOnSaveBtn();
 		
 		//click on Logout

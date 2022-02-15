@@ -11,6 +11,11 @@ import org.openqa.selenium.support.PageFactory;
 import com.makemytrip.GeneriUtils.WebDriverUtility;
 
 public class Login_SignUP_Page {
+	/**
+	 * @author Jyoti H M
+	 * Implemented Encapsulation OOP's concept.
+	 * Collection of WebElements, Business Logic's and access given to the user using getters methods.
+	 */
 	
 	WebDriverUtility wlib=new WebDriverUtility();
 	public Login_SignUP_Page(WebDriver driver) {

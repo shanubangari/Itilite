@@ -2,6 +2,7 @@ package com.makemytrip.testscripts;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.makemytrip.GeneriUtils.BaseClass;
 import com.makemytrip.GeneriUtils.WebDriverUtility;
@@ -10,8 +11,10 @@ import com.makemytrip.POMRepository.UserHomePage;
 public class Section_2_Test extends BaseClass {
 	/**
 	 * @author Jyoti H M
+	 * search for the flight Bangalore to Mumbai.
 	 */
 	WebDriverUtility wlib=new WebDriverUtility();
+	SoftAssert sa=new SoftAssert();
 	@Test
 	public void flightSearchTest() throws InterruptedException {
 		Thread.sleep(3000);
@@ -47,6 +50,8 @@ public class Section_2_Test extends BaseClass {
 		user.getMyProfile().click();
 		Thread.sleep(5000);
 		user.clickOnLogout(driver);
+		
+		sa.assertAll();
 	}
 
 }
