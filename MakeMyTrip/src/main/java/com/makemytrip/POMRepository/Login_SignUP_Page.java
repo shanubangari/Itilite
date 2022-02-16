@@ -31,7 +31,7 @@ public class Login_SignUP_Page {
 	@FindBy(xpath = "//button[@class='capText font16']")
 	private WebElement ContinueBtn;
 	
-	@FindBy(xpath = "//span[.='Login']")
+	@FindBy(xpath = "//div[@class='btnContainer appendBottom25 ']/descendant::button[@class='capText font16']")
 	private WebElement LoginBtn;
 	
 	public WebElement getPwdTextBox() {
@@ -73,6 +73,7 @@ public class Login_SignUP_Page {
 		ContinueBtn.click();
 		Thread.sleep(2000);
 		PwdTextBox.sendKeys(password);
+		Thread.sleep(3000);
 		LoginBtn.click();
 		System.out.println("****** User Login Successfylly....! ******");
 	}

@@ -1,7 +1,6 @@
 package com.makemytrip.GeneriUtils;
 
 import java.io.File;
-import java.io.IOException;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +14,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
 import com.google.common.io.Files;
 
 public class ListnerImplementation implements ITestListener{
@@ -38,7 +36,16 @@ public class ListnerImplementation implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		WebDriver driver=null;
 		try {
-			driver=(WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
+			driver=(WebDriver) result.getTestClass().getRealClass().getSuperclass().getDeclaredField("driver").get(result.getInstance());
+			EventFiringWebDriver efd=new EventFiringWebDriver(driver);
+			File src = efd.getScreenshotAs(OutputType.FILE);
+			//File dest=new File("./screenshot/"+result.getMethod().getMethodName()+"_"+JavaUtility.getCurrentDate()+"_.png");
+			File dest=new File("./screenshot/"+result.getMethod().getMethodName()+JavaUtility.getCurrentDate()+"_.png");
+			Files.copy(src, dest);
+			test.addScreenCaptureFromPath(dest.getAbsolutePath());
+			test.log(Status.FAIL, result.getMethod().getMethodName()+" is failed");
+			test.log(Status.FAIL, result.getThrowable());
+
 		} catch (IllegalArgumentException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -51,22 +58,10 @@ public class ListnerImplementation implements ITestListener{
 		} catch (SecurityException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-		}
-		EventFiringWebDriver efd=new EventFiringWebDriver(driver);
-		//TakesScreenshot ts=(TakesScreenshot)driver;
-		File src = efd.getScreenshotAs(OutputType.FILE);
-		//File dest=new File("./screenshot/"+result.getMethod().getMethodName()+"_"+JavaUtility.getCurrentDate()+"_.png");
-		File dest=new File("/.screenshot/"+result.getMethod().getMethodName()+JavaUtility.getCurrentDate()+"_.png");
-		try {
-			Files.copy(src, dest);
-			test.addScreenCaptureFromPath(dest.getAbsolutePath());
-		} catch (IOException e) {
+		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		test.log(Status.FAIL, result.getMethod().getMethodName()+" is failed");
-		test.log(Status.FAIL, result.getThrowable());
-
 	}
 
 	public void onTestSkipped(ITestResult result) {

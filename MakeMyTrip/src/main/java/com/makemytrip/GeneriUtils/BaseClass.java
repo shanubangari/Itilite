@@ -24,7 +24,7 @@ public class BaseClass {
 	 * @author Jyoti H M
 	 */
 	public WebDriver driver;
-	
+
 	WebDriverUtility wlib=new WebDriverUtility();
 	FileUtility flib=new FileUtility();
 
@@ -59,22 +59,22 @@ public class BaseClass {
 		// Sign up using G-mail.
 		MakeMyTripHomePage makemytrip=new MakeMyTripHomePage(driver);
 		makemytrip.clickOnSignUpUsingEmailOrPhone();
-		
+
 		// Login Credentials: E-mail: jyotihm22.itilite@gmail.com & Password: Itilite22@
 		Login_SignUP_Page lgnSgnup=new Login_SignUP_Page(driver);
 		String email = flib.getDataFromFile("email");
 		String pwd = flib.getDataFromFile("pwd");
-//		String email="jyotihm22.itilite@gmail.com";
-//		String pwd="Itilite22@";
+		//		String email="jyotihm22.itilite@gmail.com";
+		//		String pwd="Itilite22@";
 		lgnSgnup.LoginWithCredentials(driver,email,pwd);
 	}
-	
+
 	@AfterMethod
 	public void userLogout() {
-//		wlib.waitForElement(driver);
-//		UserHomePage user=new UserHomePage(driver);
-//		user.clickOnLogout(driver);
-		System.out.println("****** User Logout Successfully...! ******");
+		//		wlib.waitForElement(driver);
+		//		UserHomePage user=new UserHomePage(driver);
+		//      user.clickOnLogout(driver);
+		//		System.out.println("****** User Logout Successfully...! ******");
 	}
 
 	@AfterClass

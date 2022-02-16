@@ -4,9 +4,6 @@ import java.awt.AWTException;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -26,7 +23,7 @@ public class Section_1_Test extends BaseClass{
 	
 	ExcelUtility elib=new ExcelUtility();
 	WebDriverUtility wlib=new WebDriverUtility();
-	SoftAssert softassert=new SoftAssert();
+
 	
 	@Test
 	public void loginTest() throws InterruptedException, AWTException, EncryptedDocumentException, IOException {
@@ -63,9 +60,9 @@ public class Section_1_Test extends BaseClass{
 		
 		//click on Logout
 		user.clickOnLogout(driver);
+		System.out.println("****** User Logout Successfully...! ******");
 
 		
-		softassert.assertAll();
 	}	
 	
 }
