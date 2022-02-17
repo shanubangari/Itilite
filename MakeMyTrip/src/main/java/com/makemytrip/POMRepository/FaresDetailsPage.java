@@ -21,6 +21,7 @@ public class FaresDetailsPage {
 	 * Collection of WebElements, Business Logic's and access given to the user using getters methods.
 	 */
 		WebDriverUtility wlib=new WebDriverUtility();
+		public String amount;
 		
 		public FaresDetailsPage(WebDriver driver) {
 			PageFactory.initElements(driver, this);
@@ -34,7 +35,7 @@ public class FaresDetailsPage {
 		}
 		
 		public void fareCharge(WebDriver driver) {
-			String amount = FareAmount.getText();
+			  amount = FareAmount.getText();
 			System.out.println("For 1 Adult Fare charge is ="+amount);
 		}
 		

@@ -12,6 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import com.makemytrip.POMRepository.Login_SignUP_Page;
 import com.makemytrip.POMRepository.MakeMyTripHomePage;
@@ -28,6 +29,8 @@ public class BaseClass {
 	WebDriverUtility wlib=new WebDriverUtility();
 	FileUtility flib=new FileUtility();
 
+	//Step1: Launch the browser.
+	@Parameters(value="browser")
 	@BeforeClass()
 	public void launchBrowser(@Optional("chrome") String browser) throws IOException {
 		WebDriverManager.firefoxdriver().setup();
@@ -54,6 +57,7 @@ public class BaseClass {
 		System.out.println("****** Browser Launched Successfully ******");
 	}
 
+	//Step2: Login to Make My Trip application.
 	@BeforeMethod
 	public void signUpUsingGmail() throws InterruptedException, IOException {
 		// Sign up using G-mail.
@@ -77,6 +81,7 @@ public class BaseClass {
 		//		System.out.println("****** User Logout Successfully...! ******");
 	}
 
+	//Step3: Close the Current and all browsers.
 	@AfterClass
 	public void closeBrowser() {
 		driver.quit();

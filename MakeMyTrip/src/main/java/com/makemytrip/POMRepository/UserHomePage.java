@@ -148,7 +148,7 @@ public class UserHomePage {
 		wlib.waitForElement(driver);
 		ToBtn.click();
 	}
-	@FindBy(xpath = "//div[@class='DayPicker-Body']/descendant::div[@aria-label='Wed Feb 16 2022']")
+	@FindBy(xpath = "//div[@class='DayPicker-Body']/descendant::div[@aria-label='Fri Feb 18 2022']")
 	private WebElement DepartureDate;
 
 	public WebElement getDepartureDate() {
@@ -159,7 +159,7 @@ public class UserHomePage {
 		DepartureDate.click();
 	}
 
-	@FindBy(xpath = "//div[@class='DayPicker-Body']/descendant::div[@aria-label='Sat Feb 26 2022']")
+	@FindBy(xpath = "(//div[@class='DayPicker-Month']/ancestor::div[@class='DayPicker-Months']/descendant::div[@aria-label='Sun Feb 27 2022'])[1]")
 	private WebElement ReturnDate;
 
 	public WebElement getReturnDate() {

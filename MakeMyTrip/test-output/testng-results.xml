@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="269056" started-at="2022-02-16T16:37:12 IST" finished-at="2022-02-16T16:41:41 IST">
+  <suite name="Default suite" duration-ms="95849" started-at="2022-02-17T15:33:32 IST" finished-at="2022-02-17T15:35:08 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="269056" started-at="2022-02-16T16:37:12 IST" finished-at="2022-02-16T16:41:41 IST">
+    <test name="Default test" duration-ms="95849" started-at="2022-02-17T15:33:32 IST" finished-at="2022-02-17T15:35:08 IST">
       <class name="com.makemytrip.testscripts.Section_1_Test">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@1f021e6c]" name="launchBrowser" is-config="true" duration-ms="27756" started-at="2022-02-16T16:37:13 IST" finished-at="2022-02-16T16:37:40 IST">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="launchBrowser" is-config="true" duration-ms="32306" started-at="2022-02-17T15:33:33 IST" finished-at="2022-02-17T15:34:05 IST">
           <params>
             <param index="0">
               <value>
@@ -18,81 +18,95 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@1f021e6c]" name="signUpUsingGmail" is-config="true" duration-ms="9925" started-at="2022-02-16T16:37:40 IST" finished-at="2022-02-16T16:37:50 IST">
+        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="signUpUsingGmail" is-config="true" duration-ms="9144" started-at="2022-02-17T15:34:05 IST" finished-at="2022-02-17T15:34:14 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpUsingGmail -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@1f021e6c]" name="loginTest" duration-ms="59835" started-at="2022-02-16T16:37:50 IST" finished-at="2022-02-16T16:38:50 IST">
+        <test-method status="FAIL" signature="loginTest()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="loginTest" duration-ms="48307" started-at="2022-02-17T15:34:14 IST" finished-at="2022-02-17T15:35:02 IST">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TDJ6NPK', ip: '192.168.43.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PC\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:63323}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e46acd2092864b8f71bb5c6674bfc066
+*** Element info: {Using=xpath, value=.//option[@value = "1996"]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TDJ6NPK', ip: '192.168.43.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PC\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:63323}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e46acd2092864b8f71bb5c6674bfc066
+*** Element info: {Using=xpath, value=.//option[@value = "1996"]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:204)
+at org.openqa.selenium.remote.RemoteWebElement.findElementsByXPath(RemoteWebElement.java:265)
+at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
+at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:177)
+at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:280)
+at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)
+at com.makemytrip.POMRepository.Add_Travellers_Info_Page.enterBirthday(Add_Travellers_Info_Page.java:96)
+at com.makemytrip.testscripts.Section_1_Test.loginTest(Section_1_Test.java:55)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@1f021e6c]" name="userLogout" is-config="true" duration-ms="1" started-at="2022-02-16T16:38:50 IST" finished-at="2022-02-16T16:38:50 IST">
+        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="userLogout" is-config="true" duration-ms="2" started-at="2022-02-17T15:35:05 IST" finished-at="2022-02-17T15:35:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLogout -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@1f021e6c]" name="closeBrowser" is-config="true" duration-ms="1359" started-at="2022-02-16T16:38:50 IST" finished-at="2022-02-16T16:38:52 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="closeBrowser" is-config="true" duration-ms="3176" started-at="2022-02-17T15:35:05 IST" finished-at="2022-02-17T15:35:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.makemytrip.testscripts.Section_1_Test -->
-      <class name="com.makemytrip.testscripts.Section_2_Test">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1da51a35]" name="launchBrowser" is-config="true" duration-ms="27678" started-at="2022-02-16T16:38:52 IST" finished-at="2022-02-16T16:39:19 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1da51a35]" name="signUpUsingGmail" is-config="true" duration-ms="9169" started-at="2022-02-16T16:39:19 IST" finished-at="2022-02-16T16:39:28 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signUpUsingGmail -->
-        <test-method status="PASS" signature="flightSearchTest()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1da51a35]" name="flightSearchTest" duration-ms="51917" started-at="2022-02-16T16:39:28 IST" finished-at="2022-02-16T16:40:20 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flightSearchTest -->
-        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1da51a35]" name="userLogout" is-config="true" duration-ms="0" started-at="2022-02-16T16:40:20 IST" finished-at="2022-02-16T16:40:20 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userLogout -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@1da51a35]" name="closeBrowser" is-config="true" duration-ms="1456" started-at="2022-02-16T16:40:20 IST" finished-at="2022-02-16T16:40:22 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.makemytrip.testscripts.Section_2_Test -->
-      <class name="com.makemytrip.testscripts.Section_3_Test">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@16022d9d]" name="launchBrowser" is-config="true" duration-ms="24445" started-at="2022-02-16T16:40:22 IST" finished-at="2022-02-16T16:40:46 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@16022d9d]" name="signUpUsingGmail" is-config="true" duration-ms="9533" started-at="2022-02-16T16:40:46 IST" finished-at="2022-02-16T16:40:56 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signUpUsingGmail -->
-        <test-method status="PASS" signature="flightBookTest()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@16022d9d]" name="flightBookTest" duration-ms="43806" started-at="2022-02-16T16:40:56 IST" finished-at="2022-02-16T16:41:40 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flightBookTest -->
-        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@16022d9d]" name="userLogout" is-config="true" duration-ms="1" started-at="2022-02-16T16:41:40 IST" finished-at="2022-02-16T16:41:40 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userLogout -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_3_Test@16022d9d]" name="closeBrowser" is-config="true" duration-ms="1402" started-at="2022-02-16T16:41:40 IST" finished-at="2022-02-16T16:41:41 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.makemytrip.testscripts.Section_3_Test -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
