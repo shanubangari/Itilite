@@ -53,5 +53,12 @@ public class CompleteYourBookingPage {
 	public WebElement getTravellersInsurance() {
 		return TravellersInsurance;
 	}
+	
+	@FindBy(xpath = "//div[@id='INSURANCE']/descendant::p[@class='darkText fontSize12 boldFont']")
+	private WebElement TripMessage;
+	
+	public WebElement getTripElement() {
+		return TripMessage;
+	}
 
 }

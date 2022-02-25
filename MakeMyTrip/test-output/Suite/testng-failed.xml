@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="Test2(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.makemytrip.testscripts.Section_3_Test">
+        <methods>
+          <include name="signUpUsingGmail"/>
+          <include name="flightBookTest"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="userLogout"/>
+        </methods>
+      </class> <!-- com.makemytrip.testscripts.Section_3_Test -->
+      <class name="com.makemytrip.testscripts.Section_1_Test">
+        <methods>
+          <include name="signUpUsingGmail"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="userLogout"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.makemytrip.testscripts.Section_1_Test -->
+      <class name="com.makemytrip.testscripts.Section_2_Test">
+        <methods>
+          <include name="signUpUsingGmail"/>
+          <include name="flightSearchTest"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="userLogout"/>
+        </methods>
+      </class> <!-- com.makemytrip.testscripts.Section_2_Test -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="5" name="Test1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.makemytrip.testscripts.Section_3_Test">
         <methods>
@@ -13,5 +46,5 @@
         </methods>
       </class> <!-- com.makemytrip.testscripts.Section_3_Test -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

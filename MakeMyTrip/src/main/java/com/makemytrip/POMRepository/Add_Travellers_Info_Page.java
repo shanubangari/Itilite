@@ -1,7 +1,9 @@
 package com.makemytrip.POMRepository;
 
+import java.io.IOException;
 import java.util.List;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.makemytrip.GeneriUtils.ExcelUtility;
 import com.makemytrip.GeneriUtils.WebDriverUtility;
 
 public class Add_Travellers_Info_Page {
@@ -19,6 +22,7 @@ public class Add_Travellers_Info_Page {
 	 * Collection of WebElements, Business Logic's and access given to the user using getters methods.
 	 */
 	WebDriverUtility wlib=new WebDriverUtility();
+	ExcelUtility elib=new ExcelUtility();
 	public Add_Travellers_Info_Page(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -73,9 +77,7 @@ public class Add_Travellers_Info_Page {
 	public WebElement getDOB() {
 		return DOB;
 	}
-	public void enterBirthday(WebDriver driver) throws InterruptedException{
-		Thread.sleep(5000);
-
+	public void enterBirthday(WebDriver driver) throws InterruptedException, EncryptedDocumentException, IOException{
 		Thread.sleep(5000);
 		int click=0;
 		while(click<=20) {
@@ -91,20 +93,30 @@ public class Add_Travellers_Info_Page {
 			}
 		}
 		Thread.sleep(5000);
-		WebElement years = driver.findElement(By.xpath("//div[@class='makeFlex vrtlCenter']/descendant::select[@name='year']"));
-		Select s=new Select(years);
-		s.selectByValue("1996");
+		String YOB=elib.getExcelDataFromSheet("Section_1", 1, 5);
+		wlib.selectOption(years, YOB);
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//div[@class='DayPicker-Day' and @aria-label='Fri Feb 16 1996']")).click();
-
-		//				WebElement month = driver.findElement(By.xpath("//div[@class='makeFlex vrtlCenter']/descendant::select[@name='month']"));
-		//				Select s1=new Select(month);
-		//				s.selectByVisibleText("August");
-		//				Thread.sleep(3000);
-		//date.click();
+		String MON=elib.getExcelDataFromSheet("Section_1", 1, 6);
+		wlib.selectOption(month,MON);
+		wlib.waitForElement(driver);
+		date.click();
 	}
 
-	@FindBy(xpath = "//div[@class='DayPicker-Day' and @aria-label='Fri Aug 23 1996']")
+	@FindBy(xpath = "//div[@class='makeFlex vrtlCenter']/descendant::select[@name='year']")
+	private WebElement years;
+
+	public WebElement getyears() {
+		return years;
+	}
+
+	@FindBy(xpath = "//div[@class='makeFlex vrtlCenter']/descendant::select[@name='month']")
+	private WebElement month;
+
+	public WebElement getmonth() {
+		return month;
+	}
+
+	@FindBy(xpath = "//div[@class='DayPicker-Week']/descendant::div[@aria-label='Fri Aug 23 1996']")
 	private WebElement date;
 
 	public WebElement getdate() {
@@ -115,7 +127,7 @@ public class Add_Travellers_Info_Page {
 	private WebElement PassportNum;
 
 	public WebElement getPassportNum() {
-		return date;
+		return PassportNum;
 	}
 
 	public void drag(WebDriver driver) {
@@ -128,40 +140,40 @@ public class Add_Travellers_Info_Page {
 		js.executeScript("window.scrollBy(0,"+y+")");
 
 	}
-	
+
 	@FindBy(xpath = "//button[@class='font16 latoBlack whiteText btn__primry   ']")
 	private WebElement SaveBtn;
-	
+
 	public WebElement getSaveBtn() {
 		return SaveBtn;
 	}
-	
+
 	public void clickOnSaveBtn() {
 		SaveBtn.click();
-		System.out.println("**** Travelleres details added Successfully...! ");
-	}
+		}
 
-	@FindBy(id = "travellerEmailId")
+	@FindBy(xpath = "//input[@id='travellerEmailId']")
 	private WebElement EmailId;
-	
+
 	public WebElement getEmailId() {
 		return EmailId;
 	}
-	
+
 	public void enterEmail(String email) {
 		EmailId.sendKeys(email);
-	
+
 	}
-	
+
 	public void passportDetails(String number) {
 		PassportNum.sendKeys(number);
-			}
+	}
+
 	@FindBy(xpath = "//p[text()='You have 1 Traveller(s)']")
 	private WebElement userAddMsg;
-	
+
 	public WebElement getuserAddMsg() {
 		return userAddMsg;
 	}
-	
-	
+
+
 }

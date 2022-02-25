@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="95849" started-at="2022-02-17T15:33:32 IST" finished-at="2022-02-17T15:35:08 IST">
+  <suite name="Default suite" duration-ms="94648" started-at="2022-02-24T15:36:00 IST" finished-at="2022-02-24T15:37:34 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="95849" started-at="2022-02-17T15:33:32 IST" finished-at="2022-02-17T15:35:08 IST">
-      <class name="com.makemytrip.testscripts.Section_1_Test">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="launchBrowser" is-config="true" duration-ms="32306" started-at="2022-02-17T15:33:33 IST" finished-at="2022-02-17T15:34:05 IST">
+    <test name="Default test" duration-ms="94648" started-at="2022-02-24T15:36:00 IST" finished-at="2022-02-24T15:37:34 IST">
+      <class name="com.makemytrip.testscripts.Section_2_Test">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@71d15f18]" name="launchBrowser" is-config="true" duration-ms="36683" started-at="2022-02-24T15:36:00 IST" finished-at="2022-02-24T15:36:37 IST">
           <params>
             <param index="0">
               <value>
@@ -18,33 +18,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="signUpUsingGmail" is-config="true" duration-ms="9144" started-at="2022-02-17T15:34:05 IST" finished-at="2022-02-17T15:34:14 IST">
+        <test-method status="PASS" signature="signUpUsingGmail()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@71d15f18]" name="signUpUsingGmail" is-config="true" duration-ms="9439" started-at="2022-02-24T15:36:37 IST" finished-at="2022-02-24T15:36:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpUsingGmail -->
-        <test-method status="FAIL" signature="loginTest()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="loginTest" duration-ms="48307" started-at="2022-02-17T15:34:14 IST" finished-at="2022-02-17T15:35:02 IST">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method status="FAIL" signature="flightSearchTest()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@71d15f18]" name="flightSearchTest" duration-ms="25481" started-at="2022-02-24T15:36:46 IST" finished-at="2022-02-24T15:37:12 IST">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[stale element reference: element is not attached to the page document
+              <![CDATA[element click intercepted: Element <div data-cy="flightTraveller" class="fsw_inputBox flightTravllers inactiveWidget ">...</div> is not clickable at point (1118, 261). Other element would receive the click: <div class="calHeading makeFlex">...</div>
   (Session info: chrome=98.0.4758.102)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-TDJ6NPK', ip: '192.168.43.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PC\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:63323}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e46acd2092864b8f71bb5c6674bfc066
-*** Element info: {Using=xpath, value=.//option[@value = "1996"]}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PC\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:55697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 918bfe5ec83c7e4bca29a5001e09f15d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div data-cy="flightTraveller" class="fsw_inputBox flightTravllers inactiveWidget ">...</div> is not clickable at point (1118, 261). Other element would receive the click: <div class="calHeading makeFlex">...</div>
   (Session info: chrome=98.0.4758.102)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-TDJ6NPK', ip: '192.168.43.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PC\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:63323}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e46acd2092864b8f71bb5c6674bfc066
-*** Element info: {Using=xpath, value=.//option[@value = "1996"]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PC\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:55697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 918bfe5ec83c7e4bca29a5001e09f15d
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -56,14 +52,15 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:204)
-at org.openqa.selenium.remote.RemoteWebElement.findElementsByXPath(RemoteWebElement.java:265)
-at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
-at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:177)
-at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:280)
-at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)
-at com.makemytrip.POMRepository.Add_Travellers_Info_Page.enterBirthday(Add_Travellers_Info_Page.java:96)
-at com.makemytrip.testscripts.Section_1_Test.loginTest(Section_1_Test.java:55)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy17.click(Unknown Source)
+at com.makemytrip.POMRepository.UserHomePage.clickOnTravellerClass(UserHomePage.java:178)
+at com.makemytrip.testscripts.Section_2_Test.flightSearchTest(Section_2_Test.java:49)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -94,19 +91,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="userLogout" is-config="true" duration-ms="2" started-at="2022-02-17T15:35:05 IST" finished-at="2022-02-17T15:35:05 IST">
+        </test-method> <!-- flightSearchTest -->
+        <test-method status="PASS" signature="userLogout()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@71d15f18]" name="userLogout" is-config="true" duration-ms="20276" started-at="2022-02-24T15:37:13 IST" finished-at="2022-02-24T15:37:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLogout -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_1_Test@103f852]" name="closeBrowser" is-config="true" duration-ms="3176" started-at="2022-02-17T15:35:05 IST" finished-at="2022-02-17T15:35:08 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.makemytrip.testscripts.Section_2_Test@71d15f18]" name="closeBrowser" is-config="true" duration-ms="1541" started-at="2022-02-24T15:37:33 IST" finished-at="2022-02-24T15:37:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.makemytrip.testscripts.Section_1_Test -->
+      </class> <!-- com.makemytrip.testscripts.Section_2_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -26,7 +26,7 @@ public class Section_3_Test extends BaseClass {
 	SoftAssert sa=new SoftAssert();
 
 
-	@Test
+	@Test(groups = "SmokeTest")
 	public void flightBookTest() throws InterruptedException, IOException {
 		Thread.sleep(3000);
 		//Step1: Search for Flights with below filter criteria
@@ -47,73 +47,58 @@ public class Section_3_Test extends BaseClass {
 		Thread.sleep(5000);
 		user.clickOnReturnDate(driver);
 
-		//Step4: Select TravellerClass class
+		//Step4: Select TravellerClass as Business class.
 		user.clickOnTravellerClass(driver);
 		user.clickOnBusinessClass(driver);
 		user.clickOnApplyBusinessClass(driver);
+		
+		//Step5: Click on Search button and select NON-Stop flights for filter the flights..
 		user.clickOnSearchBtn(driver);
 		user.clickOnMoreBtn(driver);
 		user.clickOnNonStop(driver);
 
-		//Step5: Click on Book Now.
+		//Step6: Click on Book Now.
 		wlib.awaitForElement(driver, user.getBookFlightButton());
 		user.getBookFlightButton().click();
 		wlib.waitForElement(driver);
 		Thread.sleep(5000);
 
-		//Step6: Take screen shots of fare charges and print the Fare Charges in console.
+		
+		//Step7: Take screen shots of fare charges and print the Fare Charges in console and select Business Standard for return journey.
 		FaresDetailsPage fares=new FaresDetailsPage(driver);
-		fares.fareCharge(driver);
-
-		fares.screenshotOfFaresCharge(driver);
-		wlib.waitForElement(driver);
-		elib.writeExcelDataInSheet("Section_3_"+JavaUtility.getRandomNum(), 0, 0, fares.getFareAmount().getText());
-
+		Thread.sleep(3000);
 		wlib.scrollToElement(driver, fares.getReturn());
+		fares.clickOnBusinessStd(driver);
 		fares.screenshotOfFaresCharge(driver);
+		fares.fareCharge(driver);
+		
+		//Step8: Store the fare charge amount in excel sheet.
+		elib.writeExcelDataInSheet("Section_3_"+JavaUtility.getRandomNum(), 0, 0, fares.getFareAmount().getText());
 		wlib.waitForElement(driver);
 
-		//Step7: Click on Continue.
+		//Step9: Click on Continue.
 		fares.clickOnContinueBtn(driver);
 		Thread.sleep(5000);
 
-		//Step8: Click on non secure trip.
+		//Step10: Click on non secure trip in Travel Insurance.
 		CompleteYourBookingPage bookpg=new CompleteYourBookingPage(driver);
 		bookpg.moveToChildWindow(driver);
 		Thread.sleep(5000);
-
-
-
-		//Step9: Scroll down 
+		
+		//Step11: Scroll down and Verify the "non secure trip" option is displayed or not.
 		//wlib.scrollToElement(driver, bookpg.getTravellersInsurance());
-		try {
-			sa.assertTrue(bookpg.getTravellersInsurance().isDisplayed());
-			wlib.scrollToElement(driver, bookpg.getTravellersInsurance());
-
-			//Step10:Click on non secure trip.
-			bookpg.clickOnDoNotSecureTrip(driver);
-			Thread.sleep(5000);
-
-		} catch(Throwable e){
-
-			System.out.println("TravellersDetails option is not displayed");
-
-		}
-		finally {
-
-			wlib.scrollToElement(driver, bookpg.getTravellersDetails());
-			Thread.sleep(5000);			
-			user.clickOnJyotiName(driver);
-			Thread.sleep(5000);
-			user.getMyProfile().click();
-			user.clickOnLogout(driver);
-			System.out.println("****** User Logout Successfully...! ******");
-		}
-
-		//Step10:Click on non secure trip.
-		//bookpg.clickOnDoNotSecureTrip(driver);
-		//Thread.sleep(5000);
-
+		sa.assertTrue(bookpg.getTravellersInsurance().isDisplayed());
+		wlib.scrollToElement(driver, bookpg.getTravellersInsurance());
+		
+		//Step12:Click on non secure trip.
+		bookpg.clickOnDoNotSecureTrip(driver);
+		Thread.sleep(5000);
+		sa.assertTrue(bookpg.getTripElement().getText().contains("Get your trip Insured."));
+		Thread.sleep(3000);
+		System.out.println("--->User selected non secured trip..! "+bookpg.getTripElement().getText());
+				
+		//Step13: Scroll to MakeMyTrip Logo.
+		wlib.scrollToElement(driver, user.getFlights());
 		sa.assertAll();
 	}
 

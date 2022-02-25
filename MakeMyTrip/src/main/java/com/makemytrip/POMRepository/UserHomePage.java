@@ -25,13 +25,13 @@ public class UserHomePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//span[@class='userNameIcon whiteText makeFlex perfectCenter latoBlack appendRight10']/ancestor::li[@class='makeFlex hrtlCenter font10 makeRelative lhUser userLoggedIn']/descendant::p[@class='whiteText appendBottom3 truncate font11 lineHeight16']")
+	@FindBy(xpath = "//div[@id='loginTrigger']/descendant::span[text()='Hi Jyoti']")
 	private WebElement UserName;
 
 	@FindBy(xpath = "//p[text()='My Profile']")
 	private WebElement MyProfile;
 
-	@FindBy(xpath = "//li[@data-cy='account']")
+	@FindBy(xpath = "//li[@class='makeFlex hrtlCenter font10 makeRelative lhUser userLoggedIn']/descendant::p[text()='Hi Jyoti']")
 	private WebElement HiJyoti;
 
 	public WebElement getUserName() {
@@ -46,17 +46,14 @@ public class UserHomePage {
 		return HiJyoti;
 	}
 
-	public void moveToUserName(WebDriver driver) throws InterruptedException {
+	public void moveToHiJyoti(WebDriver driver) throws InterruptedException {
 		Thread.sleep(5000);
-		wlib.mouseHover(driver, UserName);
+		wlib.mouseHover(driver, HiJyoti);
 		Thread.sleep(5000);
-		//driver.switchTo().frame(0);
-		//MyProfile.click();
+
 	}
 	public void clickOnMyProfile(WebDriver driver) throws AWTException, InterruptedException {
 		wlib.waitForElement(driver);
-		wlib.mouseHover(driver, UserName);
-		Thread.sleep(3000);
 		MyProfile.click();
 	}
 
@@ -148,7 +145,7 @@ public class UserHomePage {
 		wlib.waitForElement(driver);
 		ToBtn.click();
 	}
-	@FindBy(xpath = "//div[@class='DayPicker-Body']/descendant::div[@aria-label='Fri Feb 18 2022']")
+	@FindBy(xpath = "//div[text()='February']/ancestor::div[@class='DayPicker-Month']/descendant::div[@aria-label='Mon Feb 21 2022']")
 	private WebElement DepartureDate;
 
 	public WebElement getDepartureDate() {
@@ -159,7 +156,7 @@ public class UserHomePage {
 		DepartureDate.click();
 	}
 
-	@FindBy(xpath = "(//div[@class='DayPicker-Month']/ancestor::div[@class='DayPicker-Months']/descendant::div[@aria-label='Sun Feb 27 2022'])[1]")
+	@FindBy(xpath = "//div[text()='March']/ancestor::div[@class='DayPicker-Month']/descendant::div[@aria-label='Thu Mar 03 2022']")
 	private WebElement ReturnDate;
 
 	public WebElement getReturnDate() {
@@ -191,7 +188,7 @@ public class UserHomePage {
 		wlib.waitForElement(driver);
 		BusinessClass.click();
 	}
-	
+
 	@FindBy(xpath = "//button[@class='primaryBtn btnApply pushRight' and text()='APPLY']")
 	private WebElement ApplyBusinessClass;
 
@@ -202,7 +199,7 @@ public class UserHomePage {
 		wlib.waitForElement(driver);
 		ApplyBusinessClass.click();
 	}
-	
+
 	@FindBy(xpath = "//a[@class='primaryBtn font24 latoBold widgetSearchBtn ' and .='Search']")
 	private WebElement SearchBtn;
 
@@ -213,8 +210,9 @@ public class UserHomePage {
 		wlib.waitForElement(driver);
 		SearchBtn.click();
 	}
-	@FindBy(xpath = "(//span[text()='Non Stop'])[1]")
+	@FindBy(xpath = "//p[.='Popular Filters']/ancestor::div[@class='filtersOuter']/descendant::span[.='Non Stop' and @class='truncate']")
 	private WebElement NonStop;
+	//p[text()='Applied Filters']/parent::div[@class='filtersOuter']/descendant::li[text()='Non Stop']
 
 	public WebElement getNonStop() {
 		return NonStop;
@@ -226,10 +224,10 @@ public class UserHomePage {
 		Iterator<String> itr = windows.iterator();
 		String pwind = itr.next();
 	}
-	
-	@FindBy(xpath = "//div[@id='loginTrigger']")
+
+	@FindBy(xpath = "//div[@id='loginTrigger' and @class='makeFlex cursorPointer']/descendant::span[.='Hi Jyoti']")
 	private WebElement JyotiName;
-	
+
 	public WebElement getJyotiName() {
 		return JyotiName;
 	}
@@ -237,8 +235,8 @@ public class UserHomePage {
 		wlib.waitForElement(driver);
 		JyotiName.click();
 	}
-	
-	
+
+
 	@FindBy(xpath="//button[text()='Book Now']") private WebElement bookFlightButton;
 	public WebDriverUtility getWlib() {
 		return wlib;
@@ -247,10 +245,10 @@ public class UserHomePage {
 	public WebElement getBookFlightButton() {
 		return bookFlightButton;
 	}
-	
+
 	@FindBy(xpath = "//span[@class='linkText pointer']")
 	private WebElement MoreBtn;
-	
+
 	public WebElement getMoreBtn() {
 		return MoreBtn;
 	}
@@ -258,10 +256,41 @@ public class UserHomePage {
 		wlib.waitForElement(driver);
 		MoreBtn.click();
 	}
-	
+
 	public void switchToWin(WebDriver driver) {
 		driver.switchTo().window(pwind);
-		
+
+	}
+
+	@FindBy(xpath = "//div[@id='profilePageComponent2']/descendant::p[@class='font18 darkGreyText appendTop10']")
+	private WebElement AddMessage;
+
+	public WebElement getAddMessage() {
+		return AddMessage;
+	}
+
+	@FindBy(xpath = "//p[text()='Applied Filters']/parent::div[@class='filtersOuter']/descendant::li[text()='Non Stop']")
+	private WebElement AppliedNonStop;
+
+	public WebElement getAppliedNonStop() {
+		return AppliedNonStop;
 	}
 	
+	@FindBy(xpath = "//li[@data-cy='menu_Flights']/descendant::span[text()='Flights']")
+	private WebElement Flights;
+	
+	public WebElement getFlights() {
+		return Flights;
+	}
+	
+	public void clickOnFlights(WebDriver driver) {
+		wlib.waitForElement(driver);
+		Flights.click();
+	}
+@FindBy(xpath = "//a[@class='chMmtLogo']/img")
+private WebElement Logo;
+
+public WebElement getLogo() {
+	return Logo;
+}
 }

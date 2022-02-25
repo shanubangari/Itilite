@@ -67,4 +67,14 @@ public class FaresDetailsPage {
 			return Return;
 		}
 		
+		@FindBy(xpath = "//div[@class='multifareCardHead makeFlex appendBottom5 gap-x-10']/descendant::p[text()='Business Standard']")
+		private WebElement BusinessStd;
+		
+		public WebElement getBusinessStd() {
+			return BusinessStd;
+		}
+		public void clickOnBusinessStd(WebDriver driver) {
+			wlib.waitForElement(driver);
+			BusinessStd.click();
+		}
 }
